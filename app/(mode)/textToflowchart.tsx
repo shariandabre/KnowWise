@@ -16,7 +16,7 @@ const mode_text_to_flowchart = () => {
   const [visible, setVisible] = React.useState(false);
 
   const MODEL_NAME = "gemini-1.0-pro"; // Replace with your model name
-  const API_KEY = "AIzaSyB6AZtoo1-ucnFherIKQ7355O17kBYw9OQ"; // Replace with your API key
+  const API_KEY = ""; // Replace with your API key
 
 
 

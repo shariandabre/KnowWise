@@ -19,7 +19,7 @@ const VidToText = () => {
     const [isLoading, setIsLoading] = useState(false); // Renamed for clarity
 
     const MODEL_NAME = 'gemini-1.0-pro';
-    const API_KEY = 'AIzaSyB6AZtoo1-ucnFherIKQ7355O17kBYw9OQ'; // Placeholder, replace with your actual API key
+    const API_KEY = ''; // Placeholder, replace with your actual API key
 
     const fetchResponse = async () => {
         try {
