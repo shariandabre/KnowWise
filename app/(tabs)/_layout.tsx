@@ -1,53 +1,79 @@
-import FontAwesome from '@expo/vector-icons/FontAwesome';
-import { Link, Tabs } from 'expo-router';
-import { Pressable, useColorScheme } from 'react-native';
+import React from "react";
+import { Ionicons, AntDesign } from "@expo/vector-icons";
+import { Link, Tabs } from "expo-router";
+import { Pressable, useColorScheme } from "react-native";
+import Colors from "../../constants/Colors";
 
-import Colors from '@/constants/Colors';
 
-/**
- * You can explore the built-in icon families and icons on the web at https://icons.expo.fyi/
- */
+
 function TabBarIcon(props: {
-  name: React.ComponentProps<typeof FontAwesome>['name'];
+  name: React.ComponentProps<typeof Ionicons>['name'];
   color: string;
 }) {
-  return <FontAwesome size={28} style={{ marginBottom: -3 }} {...props} />;
+  return <Ionicons size={24} {...props} />;
 }
 
-export default function TabLayout() {
+export default function App() {
   const colorScheme = useColorScheme();
-
   return (
     <Tabs
       screenOptions={{
-        tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
-      }}>
+        tabBarActiveTintColor: Colors[colorScheme ?? "light"].tint,
+        tabBarStyle: {
+          backgroundColor: Colors[colorScheme ?? "light"].background,
+
+        },
+        headerStyle: {
+          backgroundColor: Colors[colorScheme ?? "light"].background,
+          borderTopWidth: 1,
+          borderBottomColor: Colors[colorScheme ?? "light"].tab,
+          borderBottomWidth: 1,
+          
+        },
+    
+        tabBarInactiveTintColor: Colors[colorScheme ?? "light"].tabIconDefault,
+        headerShadowVisible: false,
+
+        // headerLeft: () => (
+        //   <Link href="/settings" asChild>
+        //     <Pressable>
+        //       {({ pressed }) => (
+        //         <AntDesign
+        //           name="menuunfold"
+        //           size={24}
+        //           color={Colors[colorScheme ?? "light"].text}
+        //           style={{ marginLeft: 15, opacity: pressed ? 0.5 : 1 }}
+        //         />
+        //       )}
+        //     </Pressable>
+        //   </Link>
+        // ),
+        headerShown: true,
+        headerTitleStyle: {
+          fontWeight:"900",
+          color: Colors[colorScheme ?? "light"].text,
+          fontFamily:'Inter'
+        },
+      }}
+    >
       <Tabs.Screen
         name="index"
         options={{
-          title: 'Tab One',
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
-          headerRight: () => (
-            <Link href="/modal" asChild>
-              <Pressable>
-                {({ pressed }) => (
-                  <FontAwesome
-                    name="info-circle"
-                    size={25}
-                    color={Colors[colorScheme ?? 'light'].text}
-                    style={{ marginRight: 15, opacity: pressed ? 0.5 : 1 }}
-                  />
-                )}
-              </Pressable>
-            </Link>
+          headerTitle: "HOME",
+          tabBarIcon: ({ color }) => (
+            <TabBarIcon name="home-outline" color={color} />
           ),
+          tabBarShowLabel: false,
         }}
       />
       <Tabs.Screen
-        name="two"
+        name="Tab2"
         options={{
-          title: 'Tab Two',
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+          headerTitle: "NOTES",
+          tabBarIcon: ({ color }) => (
+            <TabBarIcon name="folder-open-outline" color={color} />
+          ),
+          tabBarShowLabel: false,
         }}
       />
     </Tabs>

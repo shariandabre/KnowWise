@@ -1,31 +1,26 @@
-import { StyleSheet } from 'react-native';
+import { View, Text, Dimensions, ScrollView } from "react-native";
+import React, { useEffect, useState } from "react";
+import FavFiles from "../../components/FavFiles";
+import Chart from "@/components/Chart";
+import Features from "@/components/Features";
+import * as NavigationBar from 'expo-navigation-bar';
 
-import EditScreenInfo from '@/components/EditScreenInfo';
-import { Text, View } from '@/components/Themed';
+const width = Dimensions.get('window').width;
+const Tab1 = () => {
 
-export default function TabOneScreen() {
+  NavigationBar.setBackgroundColorAsync("rgb(2, 6, 23)");
+
+
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Tab One</Text>
-      <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-      <EditScreenInfo path="app/(tabs)/index.tsx" />
-    </View>
-  );
-}
+    <>
+      <View className="bg-slate-950 flex-1 p-2">
+        <Chart />
+        <Features />
+        <FavFiles/>
+        </View>
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  title: {
-    fontSize: 20,
-    fontWeight: 'bold',
-  },
-  separator: {
-    marginVertical: 30,
-    height: 1,
-    width: '80%',
-  },
-});
+    </>
+  );
+};
+
+export default Tab1;
