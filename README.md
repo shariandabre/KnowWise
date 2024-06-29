@@ -13,13 +13,11 @@ for further study.
     <td><img src="https://github.com/shariandabre/KnowWise/assets/94830605/3b170d1a-0f4d-4576-9929-9831382672d9" width="100%"></td>
   </tr>
   <tr>
-    <td><img src="https://github.com/shariandabre/KnowWise/assets/94830605/69fbdc97-a431-46dc-98e1-5018a30a1b62" width="100%"></td>
-    <td><img src="https://github.com/shariandabre/NewsFlash_mobile/assets/94830605/c7a0dd22-883f-42aa-8cd5-96ba3134f678" width="100%"></td>
-    <td><img src="https://github.com/shariandabre/NewsFlash_mobile/assets/94830605/9d7388a8-23fc-4bb0-bcf5-85f4d6232cdd" width="100%"></td>
+    <td><img src="https://github.com/shariandabre/KnowWise/assets/94830605/67fd2c0a-9a14-44fa-b03a-76cedbf08203" width="100%"></td>
+    <td><img src="https://github.com/shariandabre/KnowWise/assets/94830605/abb5eecc-d36a-491a-bd73-fb8682283772" width="100%"></td>
+    <td><img src="https://github.com/shariandabre/KnowWise/assets/94830605/8eca69f8-7e52-4cec-a192-80149048acc9" width="100%"></td>
   </tr>
-  <tr>
-    <td><img src="https://github.com/shariandabre/NewsFlash_mobile/assets/94830605/bf108a76-797b-4eed-9ff0-2abfb9de2016" width="100%"></td>
-  </tr>
+
 </table>
 
 
